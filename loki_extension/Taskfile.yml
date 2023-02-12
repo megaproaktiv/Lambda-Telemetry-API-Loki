@@ -1,0 +1,25 @@
+# https://taskfile.dev
+
+version: '3'
+
+vars:
+  GREETING: Hello, World!
+
+tasks:
+  publish:
+    desc: Publish new layer version
+    dir: bin
+    deps: [build]
+    cmds:
+      - chmod +x extensions/go-example-extension
+      - rm -f extension.zip 
+      - zip -r extension.zip extensions/
+      - ARN=`aws lambda publish-layer-version --layer-name "grafana-loki-extension" --region eu-central-1 --compatible-runtimes nodejs16.x go1.x python3.9 --zip-file  "fileb://extension.zip" --query "LayerVersionArn" --output text` && echo $ARN
+    silent: true
+
+  build:
+    desc: build new layer version
+    dir: bin
+    cmds:
+      - cd .. && GOOS=linux GOARCH=amd64 go build -o bin/extensions/go-example-extension main.go
+    silent: false
