@@ -1,0 +1,52 @@
+[
+    {
+        "record": "Bucket = lambdatelementryapistack-incoming0b397865-1vs4ek2zti39d, Key = /test-20-0 \n",
+        "time": "2023-01-07T19:00:29.391Z",
+        "type": "function"
+    },
+    {
+        "record": "Successfully added item\n",
+        "time": "2023-01-07T19:00:29.465Z",
+        "type": "function"
+    },
+    {
+        "record": "Bucket = lambdatelementryapistack-incoming0b397865-1vs4ek2zti39d, Key = /test-20-1 \n",
+        "time": "2023-01-07T19:00:39.174Z",
+        "type": "function"
+    },
+    {
+        "record": "Successfully added item\n",
+        "time": "2023-01-07T19:00:39.183Z",
+        "type": "function"
+    },
+    {
+        "record": "Bucket = lambdatelementryapistack-incoming0b397865-1vs4ek2zti39d, Key = /test-20-2 \n",
+        "time": "2023-01-07T19:00:50.122Z",
+        "type": "function"
+    },
+    {
+        "record": "Successfully added item\n",
+        "time": "2023-01-07T19:00:50.129Z",
+        "type": "function"
+    },
+    {
+        "record": "Bucket = lambdatelementryapistack-incoming0b397865-1vs4ek2zti39d, Key = /test-20-3 \n",
+        "time": "2023-01-07T19:01:00.493Z",
+        "type": "function"
+    },
+    {
+        "record": "Successfully added item\n",
+        "time": "2023-01-07T19:01:00.499Z",
+        "type": "function"
+    },
+    {
+        "record": "Bucket = lambdatelementryapistack-incoming0b397865-1vs4ek2zti39d, Key = /test-20-4 \n",
+        "time": "2023-01-07T19:01:11.910Z",
+        "type": "function"
+    },
+    {
+        "record": "Successfully added item\n",
+        "time": "2023-01-07T19:01:11.916Z",
+        "type": "function"
+    }
+]

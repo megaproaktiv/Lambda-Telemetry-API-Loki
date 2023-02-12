@@ -3,23 +3,23 @@
 version: '3'
 
 vars:
-  GREETING: Hello, World!
+  EXTENSION: grafana-loki-extension
 
 tasks:
   publish:
     desc: Publish new layer version
-    dir: bin
+    dir: dist
     deps: [build]
     cmds:
-      - chmod +x extensions/go-example-extension
+      - chmod +x extensions/{{.EXTENSION}}
       - rm -f extension.zip 
       - zip -r extension.zip extensions/
       - ARN=`aws lambda publish-layer-version --layer-name "grafana-loki-extension" --region eu-central-1 --compatible-runtimes nodejs16.x go1.x python3.9 --zip-file  "fileb://extension.zip" --query "LayerVersionArn" --output text` && echo $ARN
-    silent: true
+    silent: false
 
   build:
     desc: build new layer version
-    dir: bin
+    dir: dist
     cmds:
-      - cd .. && GOOS=linux GOARCH=amd64 go build -o bin/extensions/go-example-extension main.go
+      - cd .. && GOOS=linux GOARCH=amd64 go build -o dist/extensions/{{.EXTENSION}} main.go
     silent: false

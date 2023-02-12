@@ -1,0 +1,144 @@
+[
+    {
+        "record": {
+            "name": "go-example-logs-api-extension",
+            "state": "Subscribed",
+            "types": [
+                "platform",
+                "function",
+                "extension"
+            ]
+        },
+        "time": "2023-01-07T18:48:38.179Z",
+        "type": "platform.telemetrySubscription"
+    },
+    {
+        "record": "time=\"2023-01-07T18:48:38Z\" level=info msg=\"[client:Subscribe] Subscription success:\\\"OK\\\"\" pkg=telemetryApi\n",
+        "time": "2023-01-07T18:48:38.180Z",
+        "type": "extension"
+    },
+    {
+        "record": "time=\"2023-01-07T18:48:38Z\" level=info msg=\"[main] Subscription success\" pkg=main\n",
+        "time": "2023-01-07T18:48:38.180Z",
+        "type": "extension"
+    },
+    {
+        "record": "time=\"2023-01-07T18:48:38Z\" level=info msg=\"[main] Waiting for next event...\" pkg=main\n",
+        "time": "2023-01-07T18:48:38.180Z",
+        "type": "extension"
+    },
+    {
+        "record": "time=\"2023-01-07T18:48:38Z\" level=info msg=\"[listener:http_handler] logEvents received:10 LogEventsQueue length:10\" pkg=telemetryApi\n",
+        "time": "2023-01-07T18:48:38.233Z",
+        "type": "extension"
+    },
+    {
+        "record": {
+            "initializationType": "on-demand",
+            "phase": "init",
+            "status": "success"
+        },
+        "time": "2023-01-07T18:48:38.281Z",
+        "type": "platform.initRuntimeDone"
+    },
+    {
+        "record": {
+            "events": [
+                "INVOKE",
+                "SHUTDOWN"
+            ],
+            "name": "go-example-logs-api-extension",
+            "state": "Ready"
+        },
+        "time": "2023-01-07T18:48:38.281Z",
+        "type": "platform.extension"
+    },
+    {
+        "record": {
+            "initializationType": "on-demand",
+            "metrics": {
+                "durationMs": 156.262
+            },
+            "phase": "init"
+        },
+        "time": "2023-01-07T18:48:38.281Z",
+        "type": "platform.initReport"
+    },
+    {
+        "record": {
+            "requestId": "668079b4-d6ee-4eea-b2c8-1581cde3c4e7",
+            "version": "$LATEST"
+        },
+        "time": "2023-01-07T18:48:38.282Z",
+        "type": "platform.start"
+    },
+    {
+        "record": "time=\"2023-01-07T18:48:38Z\" level=info msg=\"[dispatcher:Dispatch] Dispatching10log events\" pkg=telemetryApi\n",
+        "time": "2023-01-07T18:48:38.282Z",
+        "type": "extension"
+    },
+    {
+        "record": "Bucket = lambdatelementryapistack-incoming0b397865-1vs4ek2zti39d, Key = /test-20-0 \n",
+        "time": "2023-01-07T18:48:38.283Z",
+        "type": "function"
+    },
+    {
+        "record": "Successfully added  \u0026{map[] \u003cnil\u003e \u003cnil\u003e {map[{}:-416959459 {}:0xc0000120a0 {}:2GTA8FHRAABSGNDIID1HTO2G1BVV4KQNSO5AEMVJF66Q9ASUAAJG {}:{13899952887680355299 195490716 0xc631a0} {}:{0 63808714118 \u003cnil\u003e} {}:{[{\u003cnil\u003e false false {map[{}:-416959459 {}:0xc0000120a0 {}:2GTA8FHRAABSGNDIID1HTO2G1BVV4KQNSO5AEMVJF66Q9ASUAAJG {}:{13899952887680355299 195490716 0xc631a0} {}:{0 63808714118 \u003cnil\u003e}]}}]}]} {}}\n",
+        "time": "2023-01-07T18:48:38.417Z",
+        "type": "function"
+    },
+    {
+        "record": {
+            "metrics": {
+                "durationMs": 135.886,
+                "producedBytes": 4
+            },
+            "requestId": "668079b4-d6ee-4eea-b2c8-1581cde3c4e7",
+            "spans": [
+                {
+                    "durationMs": 135.501,
+                    "name": "responseLatency",
+                    "start": "2023-01-07T18:48:38.282Z"
+                },
+                {
+                    "durationMs": 0.034,
+                    "name": "responseDuration",
+                    "start": "2023-01-07T18:48:38.417Z"
+                }
+            ],
+            "status": "success"
+        },
+        "time": "2023-01-07T18:48:38.418Z",
+        "type": "platform.runtimeDone"
+    },
+    {
+        "record": "time=\"2023-01-07T18:48:38Z\" level=info msg=\"[main] Received event\" pkg=main\n",
+        "time": "2023-01-07T18:48:38.555Z",
+        "type": "extension"
+    },
+    {
+        "record": "time=\"2023-01-07T18:48:38Z\" level=info msg=\"[handleInvoke]\" pkg=main\n",
+        "time": "2023-01-07T18:48:38.555Z",
+        "type": "extension"
+    },
+    {
+        "record": "time=\"2023-01-07T18:48:38Z\" level=info msg=\"[main] Waiting for next event...\" pkg=main\n",
+        "time": "2023-01-07T18:48:38.555Z",
+        "type": "extension"
+    },
+    {
+        "record": {
+            "metrics": {
+                "billedDurationMs": 274,
+                "durationMs": 273.537,
+                "initDurationMs": 156.248,
+                "maxMemoryUsedMB": 55,
+                "memorySizeMB": 1024
+            },
+            "requestId": "668079b4-d6ee-4eea-b2c8-1581cde3c4e7",
+            "status": "success"
+        },
+        "time": "2023-01-07T18:48:38.555Z",
+        "type": "platform.report"
+    }
+]

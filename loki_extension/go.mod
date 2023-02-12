@@ -1,4 +1,4 @@
-module aws-lambda-extensions/go-example-telemetry-api-extension
+module loki-extension
 
 go 1.18
 

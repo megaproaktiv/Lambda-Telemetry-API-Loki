@@ -13,3 +13,10 @@
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
+lambda_telementry_api/lambda/go/dist
+lambda_telementry_api/lambda/py/dist
+lambda_telementry_api/lambda/py/package
+.DS_Store
+lambda_telementry_api/lambda/ts/dist
+.vscode
+loki_extension/dist

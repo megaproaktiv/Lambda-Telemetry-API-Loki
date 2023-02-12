@@ -19,8 +19,8 @@ Notes:
 package main
 
 import (
-	"aws-lambda-extensions/go-example-telemetry-api-extension/extensionApi"
-	"aws-lambda-extensions/go-example-telemetry-api-extension/telemetryApi"
+	"loki-extension/extensionApi"
+	"loki-extension/telemetryApi"
 	"context"
 	"os"
 	"os/signal"

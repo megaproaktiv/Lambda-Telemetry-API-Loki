@@ -13,7 +13,7 @@ import (
 	"time"
 
 	"github.com/golang-collections/go-datastructures/queue"
-	"aws-lambda-extensions/go-example-telemetry-api-extension/loki"
+	"loki-extension/loki"
 
 )
 

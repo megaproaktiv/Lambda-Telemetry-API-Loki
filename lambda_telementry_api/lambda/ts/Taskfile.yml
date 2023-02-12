@@ -1,0 +1,27 @@
+# https://taskfile.dev
+
+version: '3'
+
+env:
+  AWS_DEFAULT_REGION: eu-central-1
+
+tasks:
+  default:
+    deps: [build]
+
+  build:
+    desc: build ts
+    cmds:
+      - npx esbuild index.ts --bundle --minify --sourcemap --platform=node --target=es2020 --outfile=dist/index.js
+      - cd dist && zip -r index.zip index.js*
+    silent: true
+
+  fastdeploy:
+    desc: Deploy only lambda
+    deps: [build]
+    vars:
+      FN:      
+        sh: aws cloudformation list-exports --query "Exports[?Name == 'telemetry-api-starter-TS-name'].Value" --output text
+    cmds:
+      - aws lambda update-function-code --function-name  {{.FN}} --zip-file fileb://dist/index.zip
+

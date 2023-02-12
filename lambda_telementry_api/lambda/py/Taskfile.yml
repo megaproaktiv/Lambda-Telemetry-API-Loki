@@ -1,0 +1,24 @@
+# https://taskfile.dev
+
+version: '3'
+
+vars:
+  GREETING: Hello, World!
+
+tasks:
+  build:
+    cmds:
+      - pip install --target ./package -r requirements.txt
+      - cd package && zip -r ../my-deployment-package.zip .
+      - zip my-deployment-package.zip app.py
+      - mv my-deployment-package.zip dist/app.zip
+    silent: true
+
+  fastdeploy:
+    desc: Deploy only lambda
+    deps: [build]
+    vars:
+      FN:      
+        sh: aws cloudformation list-exports --query "Exports[?Name == 'xraystarter-py-name'].Value" --output text
+    cmds:
+      - aws lambda update-function-code --function-name  {{.FN}} --zip-file fileb://dist/app.zip

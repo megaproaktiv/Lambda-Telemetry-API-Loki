@@ -1,0 +1,1 @@
+# Lambda Test Setup using Loki Telemtry API

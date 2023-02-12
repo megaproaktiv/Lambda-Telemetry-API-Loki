@@ -4,7 +4,7 @@
 package telemetryApi
 
 import (
-	"aws-lambda-extensions/go-example-telemetry-api-extension/loki"
+	"loki-extension/loki"
 
 	"context"
 	"encoding/json"

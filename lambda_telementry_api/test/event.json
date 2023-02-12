@@ -1,0 +1,22 @@
+{
+  "Records": [
+      {
+          "EventSource": "aws:sns",
+          "EventVersion": "1.0",
+          "EventSubscriptionArn": "arn:aws:sns:eu-central-1:012345678912:XraystarterStack-s3eventTopicB05B6E9B-aoSbXqbxY9BK:c0b657f6-b19f-4dea-bb3d-1cb7af200e3a",
+          "Sns": {
+              "Type": "Notification",
+              "MessageId": "d2bec753-a60e-57b0-a1db-9cb1716fd07e",
+              "TopicArn": "arn:aws:sns:eu-central-1:012345678912:XraystarterStack-s3eventTopicB05B6E9B-aoSbXqbxY9BK",
+              "Subject": "Amazon S3 Notification",
+              "Message": "{\"Records\":[{\"eventVersion\":\"2.1\",\"eventSource\":\"aws:s3\",\"awsRegion\":\"eu-central-1\",\"eventTime\":\"2022-11-07T09:51:28.357Z\",\"eventName\":\"ObjectCreated:Put\",\"userIdentity\":{\"principalId\":\"AWS:AROASAXMRALGUVOCCAVYO:john@doe.com\"},\"requestParameters\":{\"sourceIPAddress\":\"87.123.555.160\"},\"responseElements\":{\"x-amz-request-id\":\"S1YZ9DZAB2B9S9YS\",\"x-amz-id-2\":\"fFMKOv0+QaxTEYvW6b6c0aUGOTmLghvBwaEwuK1N/3a8wT4HXf+VE9qKLkZe3vKl1EbKE7tUQDNA1jQaBe+JJgQDtP6yxDwf\"},\"s3\":{\"s3SchemaVersion\":\"1.0\",\"configurationId\":\"M2U2ODNmMGQtNzY2NC00ODkwLTgzMzctMTNmZDg5ZGMwZGM1\",\"bucket\":{\"name\":\"xraystarterstack-incoming0b397865-ts6r40n0nlay\",\"ownerIdentity\":{\"principalId\":\"A17EXKQLWG967W\"},\"arn\":\"arn:aws:s3:::xraystarterstack-incoming0b397865-ts6r40n0nlay\"},\"object\":{\"key\":\"traffic/test-20-0\",\"size\":536,\"eTag\":\"f7ee82203e62ecb079bca307d81c87b5\",\"sequencer\":\"006368D520444A7B08\"}}}]}",
+              "Timestamp": "2022-11-07T09:51:29.088Z",
+              "SignatureVersion": "1",
+              "Signature": "JzoIKHNc5bDw+GGSCErJsecfB0iEIsQGKIVMIwF2ANzVOVE5g1KPZ8C13NQyWQoCyyhQ7yY5sT9MiCR3oSunj0BGWwt6PvF9cAA1fpiNz2kbv2JoYYTaLcztqTAF+8DtTbprXfifhgln2NbNHfv/SRphHQmnd38VynQxt2lkW5rk3u0UFH87xIe1NpE4t0kZpdb+zDwrEW6XOPp4N/vaWFosuhA1XZMPw9y5QqZw1XJFVFGjYv/deVblFvgjbC0iugEuzh2aJlK0ZjeojYb1MLtfxDRk3sAEO07t0i8lUh3PUBcxa/R58vuaF7HfIAwO1TTpqHbVNTnV1z6B2SnJfA==",
+              "SigningCertUrl": "https://sns.eu-central-1.amazonaws.com/SimpleNotificationService-56e67fcb41f6fec09b0196692625d385.pem",
+              "UnsubscribeUrl": "https://sns.eu-central-1.amazonaws.com/?Action=Unsubscribe&SubscriptionArn=arn:aws:sns:eu-central-1:139008737997:XraystarterStack-s3eventTopicB05B6E9B-aoSbXqbxY9BK:c0b657f6-b19f-4dea-bb3d-1cb7af200e3a",
+              "MessageAttributes": {}
+          }
+      }
+  ]
+}

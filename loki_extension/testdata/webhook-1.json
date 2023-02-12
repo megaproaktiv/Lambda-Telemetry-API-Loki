@@ -1,0 +1,192 @@
+[
+    {
+        "record": {
+            "initializationType": "on-demand",
+            "phase": "init"
+        },
+        "time": "2023-01-07T12:25:22.725Z",
+        "type": "platform.initStart"
+    },
+    {
+        "record": {
+            "name": "go-example-logs-api-extension",
+            "state": "Subscribed",
+            "types": [
+                "platform"
+            ]
+        },
+        "time": "2023-01-07T12:25:22.781Z",
+        "type": "platform.telemetrySubscription"
+    },
+    {
+        "record": {
+            "initializationType": "on-demand",
+            "phase": "init",
+            "status": "success"
+        },
+        "time": "2023-01-07T12:25:22.889Z",
+        "type": "platform.initRuntimeDone"
+    },
+    {
+        "record": {
+            "events": [
+                "INVOKE",
+                "SHUTDOWN"
+            ],
+            "name": "go-example-logs-api-extension",
+            "state": "Ready"
+        },
+        "time": "2023-01-07T12:25:22.889Z",
+        "type": "platform.extension"
+    },
+    {
+        "record": {
+            "initializationType": "on-demand",
+            "metrics": {
+                "durationMs": 164.099
+            },
+            "phase": "init"
+        },
+        "time": "2023-01-07T12:25:22.889Z",
+        "type": "platform.initReport"
+    },
+    {
+        "record": {
+            "requestId": "886789a8-dfdd-4762-97ed-5c2e91debc35",
+            "version": "$LATEST"
+        },
+        "time": "2023-01-07T12:25:22.890Z",
+        "type": "platform.start"
+    },
+    {
+        "record": {
+            "metrics": {
+                "durationMs": 77.482,
+                "producedBytes": 4
+            },
+            "requestId": "886789a8-dfdd-4762-97ed-5c2e91debc35",
+            "spans": [
+                {
+                    "durationMs": 77.132,
+                    "name": "responseLatency",
+                    "start": "2023-01-07T12:25:22.890Z"
+                },
+                {
+                    "durationMs": 0.025,
+                    "name": "responseDuration",
+                    "start": "2023-01-07T12:25:22.967Z"
+                }
+            ],
+            "status": "success"
+        },
+        "time": "2023-01-07T12:25:22.968Z",
+        "type": "platform.runtimeDone"
+    },
+    {
+        "record": {
+            "metrics": {
+                "billedDurationMs": 78,
+                "durationMs": 77.829,
+                "initDurationMs": 164.089,
+                "maxMemoryUsedMB": 49,
+                "memorySizeMB": 1024
+            },
+            "requestId": "886789a8-dfdd-4762-97ed-5c2e91debc35",
+            "status": "success"
+        },
+        "time": "2023-01-07T12:25:22.968Z",
+        "type": "platform.report"
+    },
+    {
+        "record": {
+            "requestId": "c74621af-c0e9-46ec-bbd3-34069f945a77",
+            "version": "$LATEST"
+        },
+        "time": "2023-01-07T12:25:32.618Z",
+        "type": "platform.start"
+    },
+    {
+        "record": {
+            "metrics": {
+                "durationMs": 8.691,
+                "producedBytes": 4
+            },
+            "requestId": "c74621af-c0e9-46ec-bbd3-34069f945a77",
+            "spans": [
+                {
+                    "durationMs": 8.226,
+                    "name": "responseLatency",
+                    "start": "2023-01-07T12:25:32.618Z"
+                },
+                {
+                    "durationMs": 0.171,
+                    "name": "responseDuration",
+                    "start": "2023-01-07T12:25:32.626Z"
+                }
+            ],
+            "status": "success"
+        },
+        "time": "2023-01-07T12:25:32.627Z",
+        "type": "platform.runtimeDone"
+    },
+    {
+        "record": {
+            "metrics": {
+                "billedDurationMs": 9,
+                "durationMs": 8.984,
+                "maxMemoryUsedMB": 49,
+                "memorySizeMB": 1024
+            },
+            "requestId": "c74621af-c0e9-46ec-bbd3-34069f945a77",
+            "status": "success"
+        },
+        "time": "2023-01-07T12:25:32.627Z",
+        "type": "platform.report"
+    },
+    {
+        "record": {
+            "requestId": "3378dcd5-ef4c-4894-a95b-ffcd795b831a",
+            "version": "$LATEST"
+        },
+        "time": "2023-01-07T12:25:43.469Z",
+        "type": "platform.start"
+    },
+    {
+        "record": {
+            "metrics": {
+                "durationMs": 9.322,
+                "producedBytes": 4
+            },
+            "requestId": "3378dcd5-ef4c-4894-a95b-ffcd795b831a",
+            "spans": [
+                {
+                    "durationMs": 9.013,
+                    "name": "responseLatency",
+                    "start": "2023-01-07T12:25:43.469Z"
+                },
+                {
+                    "durationMs": 0.017,
+                    "name": "responseDuration",
+                    "start": "2023-01-07T12:25:43.478Z"
+                }
+            ],
+            "status": "success"
+        },
+        "time": "2023-01-07T12:25:43.478Z",
+        "type": "platform.runtimeDone"
+    },
+    {
+        "record": {
+            "metrics": {
+                "billedDurationMs": 10,
+                "durationMs": 9.613,
+                "maxMemoryUsedMB": 49,
+                "memorySizeMB": 1024
+            },
+            "requestId": "3378dcd5-ef4c-4894-a95b-ffcd795b831a",
+            "status": "success"
+        },
+        "time": "2023-01-07T12:25:43.478Z",
+        "type": "platform.report"
+    }
+]

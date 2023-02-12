@@ -1,0 +1,37 @@
+{
+  "name": "lambda",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx esbuild index.ts --bundle --minify --sourcemap --platform=node --target=es2020 --outfile=dist/index.js",
+    "watch": "tsc -w"
+  },
+  "author": "gglawe@tecracer.de",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.11.9",
+    "ts-node": "^10.9.1",
+    "typescript": "~4.8.4"
+  },
+  "dependencies": {
+    "ast": "^1.0.7",
+    "aws-sdk": "^2.1248.0",
+    "aws-xray-sdk": "^3.3.8",
+    "util": "^0.12.5"
+  },
+  "targets": {
+    "cdk-lambda": {
+      "context": "node",
+      "includeNodeModules": {
+        "aws-sdk": false
+      },
+      "sourceMap": false,
+      "minify": false,
+      "engines": {
+        "node": ">= 12"
+      }
+    }
+  }
+}

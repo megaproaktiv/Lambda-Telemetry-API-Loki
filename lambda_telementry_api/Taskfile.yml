@@ -1,0 +1,61 @@
+# https://taskfile.dev
+
+version: '3'
+
+vars:
+  CDK_VER: 2.59.0
+
+includes:
+  go: 
+    taskfile: ./lambda/go/Taskfile.yml
+    dir: ./lambda/go
+  typescript: 
+    taskfile: ./lambda/ts/Taskfile.yml
+    dir: ./lambda/ts 
+  python: 
+    taskfile: ./lambda/py/Taskfile.yml
+    dir: ./lambda/py
+
+tasks:
+
+  bootstrap:
+    desc: CDK bootstrap (for beginners)
+    vars:
+      ALIAS: 
+        sh:  aws iam list-account-aliases --query "AccountAliases[0]" --output=text
+    
+    cmds:
+      - npx cdk@{{.CDK_VER}}  bootstrap 
+
+  build:
+    desc: Build lambdas
+    cmds: 
+      - task: typescript:build
+      - task: python:build
+      - task: go:build
+
+  deploy:
+    desc: 1) Deploy cdk without asking - needs docker
+    deps: [build]
+    cmds:
+      - npx cdk@{{.CDK_VER}} deploy --require-approval never
+    silent: true
+
+  diff:
+    desc: 2) cdk diff
+    cmds:
+      - npx cdk@{{.CDK_VER}} diff --require-approval never
+    silent: true
+
+  destroy:
+    desc: 3) Destroy cdk without asking - needs docker
+    cmds:
+      - npx cdk@{{.CDK_VER}} deploy --require-approval never
+    silent: true
+
+
+
+  traffic:
+    desc: Create traffic on S3 bucket
+    cmds:
+      - test/traffic.sh      
