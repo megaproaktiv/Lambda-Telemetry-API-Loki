@@ -13,17 +13,15 @@ import (
 	"strconv"
 
 	"github.com/golang-collections/go-datastructures/queue"
-
 )
 
 type Dispatcher struct {
 	httpClient   *http.Client
-	lokiIp      string
+	lokiIp       string
 	minBatchSize int64
 }
 
 func NewDispatcher() *Dispatcher {
-
 	dispatchMinBatchSize, err := strconv.ParseInt(os.Getenv("DISPATCH_MIN_BATCH_SIZE"), 0, 16)
 	if err != nil {
 		dispatchMinBatchSize = 1
@@ -33,7 +31,6 @@ func NewDispatcher() *Dispatcher {
 		httpClient:   &http.Client{},
 		minBatchSize: dispatchMinBatchSize,
 	}
-
 }
 
 func (d *Dispatcher) Dispatch(ctx context.Context, logEventsQueue *queue.Queue, force bool) {
@@ -43,11 +40,10 @@ func (d *Dispatcher) Dispatch(ctx context.Context, logEventsQueue *queue.Queue, 
 
 		logEntries, _ := logEventsQueue.Get(logEventsQueue.Len())
 
-
-		for _,log := range logEntries {
+		for _, log := range logEntries {
 			logEntry := loki.LogEntry{}
 			bodyBytes, _ := json.Marshal(log)
-			err := json.Unmarshal(bodyBytes,&logEntry)
+			err := json.Unmarshal(bodyBytes, &logEntry)
 			if err != nil {
 				l.Warn("Could not send to loki")
 				l.Warn(err)
@@ -56,10 +52,6 @@ func (d *Dispatcher) Dispatch(ctx context.Context, logEventsQueue *queue.Queue, 
 				continue
 			}
 			loki.LokiSend(&logEntry.Record)
-
 		}
-		
-	
 	}
 }
-

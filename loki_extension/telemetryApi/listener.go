@@ -12,9 +12,9 @@ import (
 	"os"
 	"time"
 
-	"github.com/golang-collections/go-datastructures/queue"
 	"loki-extension/loki"
 
+	"github.com/golang-collections/go-datastructures/queue"
 )
 
 const defaultListenerPort = "4323"
